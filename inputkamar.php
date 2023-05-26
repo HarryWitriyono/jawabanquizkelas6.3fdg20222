@@ -8,4 +8,9 @@
 </form>
 <?php 
 if (isset($_POST['bSimpan'])) {
-  $namakamar="
+  $namakamar=$_POST['namakamar'];
+  $kon=mysqli_connect("localhost","root","","sewakamarasrama");
+  $sql="insert into kamarasrama (namakamar) values ('".$namakamar."')";
+  $q=mysqli_query($kon,$sql);
+}
+?>
